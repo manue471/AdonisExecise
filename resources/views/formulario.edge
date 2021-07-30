@@ -1,0 +1,28 @@
+@layout('layouts/bootstrap')
+@set('title', 'Cadastro de notícia')
+
+@section('conteudo')
+
+<h1 class="text-center">Cadastro de notícia</h1>
+
+<form method="post" action="{{ route('cadastrar') }}" >
+    <div>
+        <label>Título</label>
+        <input type="text" name="titulo" class="form-control">
+    </div>
+
+    <div class="mt-2">
+        <label>Chamada</label>
+        <input type="text" name="chamada" class="form-control">
+    </div>
+
+    <div class="mt-2">
+        <label>Conteúdo</label>
+        <textarea name="conteudo" class="form-control"></textarea>
+    </div>
+
+    <div class="mt-2">
+        <button class="btn btn-success">Finalizar</button>
+    </div>
+</form>
+@end
